@@ -1,0 +1,5 @@
+- content_for :crop_tool do
+  = render template: 'crop_tool/common_canvas'
+
+ol.the-sortable-tree.the-sortable-tree--list.js--attached-images--list(data={ max_levels: 1, rebuild_url: rebuild_attached_images_url })
+  = sortable_tree item.attached_images.nested_set, render_module: AttachedImagesTreeHelper
