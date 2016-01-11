@@ -19,13 +19,13 @@ module AttachedImagesTreeHelper
           <li data-node-id='#{ @node.id }' class='js--attached-images--node-#{ @node.id }'>
             <div class='ptz--div-0 p10'>
 
-              <div class='table w100p'>
-                <div class='row'>
-                  <div class='cell w100p vam'>
+              <div class='ptz--table w100p'>
+                <div class='ptz--tr'>
+                  <div class='ptz--td w100p vam'>
                     #{ attached_image_block }
                   </div>
 
-                  <div class='cell w30px tac'>
+                  <div class='ptz--td w30px tac'>
                     #{ handler }
                   </div>
                 </div>
