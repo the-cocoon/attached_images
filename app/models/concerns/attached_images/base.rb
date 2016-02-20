@@ -12,10 +12,12 @@ module AttachedImages
       before_save   :file_generate_file_name, if: ->(o) { o.file_need_to_be_processed? }
       after_commit  :file_build_variants
 
+      prefix = ::AttachedImages.config.storage_prefix
+
       has_attached_file :file,
-                        default_url: "/default_images/attached_images/:style.gif",
-                        path:        ":rails_root/public/uploads/attached_images/:holder_type/:holder_id/:id/:style/:filename",
-                        url:         "/uploads/attached_images/:holder_type/:holder_id/:id/:style/:filename"
+                        default_url: "/default_images/#{ prefix }/attached_images/:style.gif",
+                        path:        ":rails_root/public/uploads/#{ prefix }/attached_images/:holder_type/:holder_id/:id/:style/:filename",
+                        url:         "/uploads/#{ prefix }/attached_images/:holder_type/:holder_id/:id/:style/:filename"
 
       # do_not_validate_attachment_file_type :file
       validates_attachment_content_type :file, content_type: /image/

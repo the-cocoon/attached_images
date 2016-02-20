@@ -1,4 +1,5 @@
 require "attached_images/version"
+require "attached_images/config"
 
 require "image_tools"
 require "crop_tool"
