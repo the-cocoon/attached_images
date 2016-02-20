@@ -16,8 +16,8 @@ module AttachedImages
 
       has_attached_file :file,
                         default_url: "/default_images/#{ prefix }/attached_images/:style.gif",
-                        path:        ":rails_root/public/uploads/#{ prefix }/attached_images/:holder_type/:holder_id/:id/:style/:filename",
-                        url:         "/uploads/#{ prefix }/attached_images/:holder_type/:holder_id/:id/:style/:filename"
+                        path:        ":rails_root/public/uploads/#{ prefix }/attached_images/:holder_type-:holder_id/:id/:style/:filename",
+                        url:         "/uploads/#{ prefix }/attached_images/:holder_type-:holder_id/:id/:style/:filename"
 
       # do_not_validate_attachment_file_type :file
       validates_attachment_content_type :file, content_type: /image/
