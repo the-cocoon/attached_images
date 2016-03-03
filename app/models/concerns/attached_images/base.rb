@@ -15,7 +15,7 @@ module AttachedImages
       prefix = ::AttachedImages.config.storage_prefix
 
       has_attached_file :file,
-                        default_url: "/default_images/#{ prefix }/attached_images/:style.gif",
+                        default_url: "/projects/#{ prefix }/default_images/attached_images/:style.gif",
                         path:        ":rails_root/public/uploads/#{ prefix }/attached_images/:holder_type-:holder_id/:id/:style/:filename",
                         url:         "/uploads/#{ prefix }/attached_images/:holder_type-:holder_id/:id/:style/:filename"
 
