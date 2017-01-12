@@ -90,7 +90,7 @@ $(document).on "ready page:load", ->
 ```
 = yield :crop_tool
 
-.ptz--div-0.p20.mb30
+.ptz_div-0.p20.mb30
   = render template: 'attached_images/new', locals: { item: @product }
 
 = render template: 'attached_images/list', locals: { item: @product }

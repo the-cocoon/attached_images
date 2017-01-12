@@ -7,13 +7,13 @@
             = image_tag image.file.url(:v100x100), class: "w100 js--attached-images--v500x500-img-#{ image.id }"
           .pull-left
 
-            .ptz--table
-              .ptz--tr
-                .ptz--td
+            .ptz_table
+              .ptz_tr
+                .ptz_td
                   .mb15.fs13
                     span.b 4:3 &nbsp;
 
-                .ptz--td
+                .ptz_td
                   .mb15.fs13
                     = link_to '1024x768', image.file.url(:v1024x768), target: :_blank
                     |,
@@ -23,12 +23,12 @@
                     '
                     = link_to '640x480',  image.file.url(:v640x480), target: :_blank
 
-              .ptz--tr
-                .ptz--td
+              .ptz_tr
+                .ptz_td
                   .mb15.fs13
                     span.b 16:9 &nbsp;
 
-                .ptz--td
+                .ptz_td
                   .mb15.fs13
                     = link_to '1600x900', image.file.url(:v1600x900), target: :_blank
                     |,
@@ -38,11 +38,11 @@
                     '
                     = link_to '640x360',  image.file.url(:v640x360), target: :_blank
 
-              .ptz--tr
-                .ptz--td
+              .ptz_tr
+                .ptz_td
                   .mb15.fs13
                     span.b 1:1 &nbsp;
-                .ptz--td
+                .ptz_td
                   .mb15.fs13
                     = link_to '500x500', image.file.url(:v500x500), target: :_blank
                     |,
@@ -104,10 +104,10 @@
             tr
               td
                 .mb15
-                  = link_to [image, :rotate_left], method: :patch, remote: true, data: { type: :json }, class: 'ptz--btn ptz--size-14 mr15 js--attached-images--rotate' do
+                  = link_to [image, :rotate_left], method: :patch, remote: true, data: { type: :json }, class: 'ptz_btn ptz_size-14 mr15 js--attached-images--rotate' do
                     .fa.fa-undo
 
-                  = link_to [image, :rotate_right], method: :patch, remote: true, data: { type: :json }, class: 'ptz--btn ptz--size-14 js--attached-images--rotate'
+                  = link_to [image, :rotate_right], method: :patch, remote: true, data: { type: :json }, class: 'ptz_btn ptz_size-14 js--attached-images--rotate'
                     .fa.fa-repeat
 
                 .mb15= image_tag image.file.url(:original), width: '100%', class: "js--attached-images--original-img-#{ image.id }"
@@ -116,8 +116,8 @@
               td.w20
               td.w200
                 .mb15
-                  = link_to '#', class: 'ptz--btn ptz--size-14 mr15', data: crop_data_4x3 do
-                    .ptz--btn--icon.fa.fa-crop
+                  = link_to '#', class: 'ptz_btn ptz_size-14 mr15', data: crop_data_4x3 do
+                    .ptz_btn--icon.fa.fa-crop
                     |4x3
 
                 .mb15= image_tag image.file.url(:v1024x768), width: '100%', class: "js--attached-images--v1024x768-img-#{ image.id }", data: { role: 'attached-image--v4x3' }
@@ -125,8 +125,8 @@
               td.w20
               td.w200
                 .mb15
-                  = link_to '#', class: 'ptz--btn ptz--size-14 mr15', data: crop_data_16x9 do
-                    .ptz--btn--icon.fa.fa-crop
+                  = link_to '#', class: 'ptz_btn ptz_size-14 mr15', data: crop_data_16x9 do
+                    .ptz_btn--icon.fa.fa-crop
                     |16x9
 
                 .mb15= image_tag image.file.url(:v1600x900), width: '100%', class: "js--attached-images--v1600x900-img-#{ image.id }", data: { role: 'attached-image--v16x9' }
@@ -134,12 +134,12 @@
               td.w20
               td.w100
                 .mb15
-                  = link_to '#', class: 'ptz--btn ptz--size-14 mr15', data: crop_data_1x1 do
-                    .ptz--btn--icon.fa.fa-crop
+                  = link_to '#', class: 'ptz_btn ptz_size-14 mr15', data: crop_data_1x1 do
+                    .ptz_btn--icon.fa.fa-crop
                     |1x1
 
                 .mb15= image_tag image.file.url(:v500x500), width: '100px', class: "js--attached-images--v500x500-img-#{ image.id }", data: { role: 'attached-image--v1x1' }
 
         .form-classic--action.clearfix
           .pull-right
-            = link_to 'Удалить', image, method: :delete, remote: true, data: { type: :json }, class: 'ptz--btn ptz--size-14 js--attached-images--delete', data: { confirm: "Сохраните изменения в тексте перед удалением главного изображения. Продолжить?" }
+            = link_to 'Удалить', image, method: :delete, remote: true, data: { type: :json }, class: 'ptz_btn ptz_size-14 js--attached-images--delete', data: { confirm: "Сохраните изменения в тексте перед удалением главного изображения. Продолжить?" }
